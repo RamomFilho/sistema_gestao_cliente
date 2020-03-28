@@ -1,0 +1,7 @@
+.idea
+.sqlite3
+db.sqlite3
+media
+home/__pycache__/
+cliente/__pycache__/
+.pyc
