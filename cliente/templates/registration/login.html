@@ -1,6 +1,23 @@
-<h2>Login</h2>
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block title %}Página de Login{% endblock %}
+{% block main %}
+
+<h1>Página de Login</h1>
+
 <form method="POST">
     {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
+    {{ form|bootstrap }}
+    <button type="submit" class="btn btn-dark">Login</button>
 </form>
+
+{% endblock %}
+
+{% block footer %}
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Desenvolvimento Web com Django - Ramom</span>
+        </div>
+    </footer>
+{% endblock %}
