@@ -5,3 +5,4 @@ media
 home/__pycache__/
 cliente/__pycache__/
 .pyc
+.env
