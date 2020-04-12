@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Seja bem vindo! {% endblock %}
+{% block main %}
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-6">
+      <h1>Seja bem vindo</h1>
+    </div>
+    <div class="col-sm">
+       {% if user.is_authenticated %}
+    <p>Olá {{ user.username }} a home 3, mano. </p>
+        <p>{{ minha_variavel }}</p>
+    <a href="{% url 'logout' %}">Sair</a>
+    {% else %}
+    <a href="{% url 'login' %}" class="btn btn-info">Login</a>
+    {% endif %}
+    </div>
+  </div>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Enviar</button>
+</form>
+{% endblock %}
+
+
+
+{% block footer %}
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted">Desenvolvimento Web com Django - Ramom</span>
+        </div>
+    </footer>
+{% endblock %}

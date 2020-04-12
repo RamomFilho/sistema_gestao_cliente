@@ -23,7 +23,7 @@ from home import urls as urls_home
 
 urlpatterns = [
     path('', include(urls_home)),
-    path('clientes/', include(clientes_urls)),
+    path('cliente/', include(clientes_urls)),
     path('login/', auth_views.LoginView.as_view(), name='login'),
     # path('logout/', auth_views.logout_then_login, name='logout'),
     path('admin/', admin.site.urls),
