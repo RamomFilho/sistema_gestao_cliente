@@ -7,3 +7,6 @@ cliente/__pycache__/
 .pyc
 .env
 cliente/templatetags/__pycache__/
+cliente/migrations/__pycache__/0003_documento.cpython-37.pyc
+gestao_clientes/__pycache__/settings.cpython-37.pyc
+gestao_clientes/__pycache__/urls.cpython-37.pyc

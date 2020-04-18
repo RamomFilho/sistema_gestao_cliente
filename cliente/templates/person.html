@@ -14,7 +14,7 @@
                 <ul class="list-group">
     {% for person in persons %}
 
-        <li class="list-group-item"><a href="{% url 'person_update' person.id %}">{{ person.first_name }}</a>
+        <li class="list-group-item"><a href="{% url 'person_update' person.id %}">{{ person.nome_completo|title }}</a>
             <a href="{% url 'person_delete' person.id %}" class="trash-item">
                 <i class="fa fa-trash" aria-hidden="true"></i></a></li>
 
@@ -34,21 +34,9 @@
 
         </div>
     </div>
-{% filter force_escape|lower %}
-    Aqui é o Ramom Filho
-{% endfilter %}
-
-{% if persons|length >= 2 %}
+{% if persons|length >= 20 %}
     Você possui bastante registros.
 {% endif %}
-
-{% now "jS F Y H:i" %}
-
-{{ footer_message|my_filter }}
-
-{{ 123.3445|arredonda:3 }}
-
-
 
 
 
